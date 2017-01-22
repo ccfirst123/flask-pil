@@ -1,0 +1,11 @@
+{% extends "bootstrap/base.html" %}
+{%  import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}出差派遣单生成{% endblock %}
+
+{% block content %}
+<div class="container">
+    <img src= "{{ url_for('static', filename=image_name, time=time) }}">
+    {{ wtf.quick_form(form, form_type="horizontal", horizontal_columns=('lg',2,4)) }}
+</div>
+{% endblock %}
