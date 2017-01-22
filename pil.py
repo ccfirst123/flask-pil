@@ -32,9 +32,10 @@ def index():
     form = TableForm()
     if form.validate_on_submit():
         img = Image.open(os.path.join(STATIC_DIR, "template.jpg")).convert("RGB")
-        font1 = ImageFont.truetype(os.path.join(STATIC_DIR, "xjl.ttf"), 30)
+        #download font.ttf to static file, and use different font will be better
+        font1 = ImageFont.truetype(os.path.join(STATIC_DIR, "jmt.ttf"), 30)
         font2 = ImageFont.truetype(os.path.join(STATIC_DIR, "jmt.ttf"), 30)
-        font3 = ImageFont.truetype(os.path.join(STATIC_DIR, "maozedong.ttf"), 28)
+        font3 = ImageFont.truetype(os.path.join(STATIC_DIR, "jmt.ttf"), 28)
 
         draw = ImageDraw.Draw(img)
         color = (0, 0, 0)
